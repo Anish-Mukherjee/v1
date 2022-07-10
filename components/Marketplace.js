@@ -47,30 +47,30 @@ const Marketplace = () => {
             >
               <FormControl>
                 <FormLabel fontSize={"xl"}>Become an expert</FormLabel>
-                <label for="name">Name</label>
+                <label >Name</label>
                 <Input type="text" placeholder="Vitalik Buterin" id="name" />
-                <label for="skills">Skills</label>
+                <label >Skills</label>
                 <Input
                   type="text"
                   placeholder="Solidity, C, Assembly, Python..."
                   id="skills"
                 />
-                <label for="wallet">Wallet Address</label>
+                <label >Wallet Address</label>
                 <Input
                   type="text"
                   placeholder="0x...."
                   id="wallet"
                 />
-                <label for="rate">Rate</label>
+                <label>Rate</label>
                 <Input type="number" placeholder="1 ETH Per Hour" id="rate" />
-                <label for="timezone" marginTop={'10px'}>Time Zone</label>
+                <label  marginTop={'10px'}>Time Zone</label>
                 <Select placeholder='Select option' marginTop={'10px'} id="timezone">
   <option value='option1'>EST</option>
   <option value='option2'>CT</option>
   <option value='option3'>PT</option>
 </Select>
                 
-                <label for="pfp">Profile Picture</label>
+                <label>Profile Picture</label>
                 <Input
                   type="image"
                   id="pfp"
