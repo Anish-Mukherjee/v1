@@ -14,8 +14,7 @@ export default function Header({isAuthenticated, isAuthenticating, authenticate,
                     ) : (
                         <Button colorScheme="purple" onClick={() => authenticate({
                             signingMessage: "Sign in to Confer"
-                        })} disabled={isAuthenticating}>Login</Button>,
-                        
+                        })} disabled={isAuthenticating}>Login</Button>
                     )}
                 </Center>
             </Flex>
