@@ -142,7 +142,7 @@ import {
             >
               <FormControl>
                 <FormLabel fontSize={"xl"}>Booking Request</FormLabel>
-                <label for="msg">Message</label>
+                <label>Message</label>
                 <Textarea id="msg" height="60vh"/>
                 <FormHelperText>
                   We keep your account data secure
