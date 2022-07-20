@@ -15,7 +15,7 @@ import {
   Input,
   ModalFooter,
   useDisclosure, Select
-} from "@chakra-ui/react";
+} from "@chakra-ui/react"
 import Profile from "./Profile";
 
 
