@@ -12,7 +12,7 @@ export default function Home() {
       <title>Confer</title>
     </Head>
     <Flex direction="column" width="100vw" height="100vh">
-      <Box flex="1" bg="purple.100" px="52" py="20">
+      <Box flex="1" bg="red.400" px="52" py="20">
         <Tabs size="lg" colorScheme="purple" align="center" variant="enclosed">
               <Marketplace />
         </Tabs>
