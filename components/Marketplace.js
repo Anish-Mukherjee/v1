@@ -23,7 +23,6 @@ const Marketplace = () => {
   const { isOpen, onClose, onOpen } = useDisclosure();
   return (
     <>
-      <Text fontSize="xl">Marketplace</Text>
       <Flex justifyContent="space-around">
         <Profile />
         <Profile />
