@@ -5,28 +5,22 @@ import {
     Center,
     Text,
     Stack,
-    Link,
     Badge,
     useColorModeValue,
     Button,
-    Flex,
-    ChakraProvider,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalHeader,
-    ModalCloseButton,
-    ModalBody,
-    FormControl,
-    FormLabel,
-    FormHelperText,
-    Input,
-    ModalFooter,
-    useDisclosure, Select, Textarea
+    Link
+   
   } from '@chakra-ui/react';
+  import { useMoralis } from "react-moralis";
 
   
   export default function Profile() {
+    const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
+    if (isAuthenticated) {
+      return (
+        
+      )
+    }
     return (
       <Center py={6}>
         <Box
@@ -40,7 +34,7 @@ import {
           <Avatar
             size={'xl'}
             src={
-              'https://imageio.forbes.com/specials-images/imageserve/5d8acdb96de3150009a5060c/0x0.jpg?format=jpg&crop=2028,2027,x1394,y380,safe&height=416&width=416&fit=bounds'
+              'https://pbs.twimg.com/profile_images/1548399412061212672/9Rq84t8a_400x400.jpg'
             }
             alt={'Avatar Alt'}
             mb={4}
@@ -58,36 +52,15 @@ import {
             }}
           />
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            Mark Cuban
+            mo
           </Heading>
           <Text
             textAlign={'center'}
             color={useColorModeValue('gray.700', 'gray.400')}
             px={3}>
-            Owner of Dallas Mavericks {' '}
+            Creator of Confer {' '}
           </Text>
          
-          <Text
-            textAlign={'center'}
-            color={useColorModeValue('gray.700', 'gray.400')}
-            px={3}
-            fontSize="xs">
-            - Sports Marketing {' '}
-          </Text>
-          <Text
-            textAlign={'center'}
-            color={useColorModeValue('gray.700', 'gray.400')}
-            px={3}
-            fontSize="xs">
-            - Investing {' '}
-          </Text>
-          <Text
-            textAlign={'center'}
-            color={useColorModeValue('gray.700', 'gray.400')}
-            px={3}
-            fontSize="xs">
-            - Entrepreneurship {' '}
-          </Text>
           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
             <Badge
               px={2}
@@ -122,7 +95,25 @@ import {
               _focus={{
                 bg: 'blue.500',
               }}>
-              Book
+              <Link href="https://cal.com/momin/30min" target="_blank">Book</Link>
+            </Button>
+
+            <Button onClick={()=>authenticate()}
+              flex={1}
+              fontSize={'sm'}
+              rounded={'full'}
+              bg={'yellow.400'}
+              color={'white'}
+              boxShadow={
+                '0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)'
+              }
+              _hover={{
+                bg: 'yellow.500',
+              }}
+              _focus={{
+                bg: 'yellow.500',
+              }}>
+              Deposit
             </Button>
           </Stack>
         </Box>
