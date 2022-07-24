@@ -11,16 +11,9 @@ import {
     Link
    
   } from '@chakra-ui/react';
-  import { useMoralis } from "react-moralis";
 
-  
   export default function Profile() {
-    const { authenticate, isAuthenticated, isAuthenticating, user, account, logout } = useMoralis();
-    if (isAuthenticated) {
-      return (
-        
-      )
-    }
+  
     return (
       <Center py={6}>
         <Box
@@ -98,7 +91,7 @@ import {
               <Link href="https://cal.com/momin/30min" target="_blank">Book</Link>
             </Button>
 
-            <Button onClick={()=>authenticate()}
+            <Button 
               flex={1}
               fontSize={'sm'}
               rounded={'full'}
@@ -113,7 +106,7 @@ import {
               _focus={{
                 bg: 'yellow.500',
               }}>
-              Deposit
+              <Link href="https://thirdweb.com/dashboard/mumbai/0x70e7aD90645788eEa38f200d2338530ebf1eF540/" target="_blank">Book</Link>
             </Button>
           </Stack>
         </Box>
