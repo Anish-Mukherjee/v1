@@ -27,7 +27,6 @@ import {
 
   
   export default function Profile() {
-    const { isOpen, onClose, onOpen } = useDisclosure();
     return (
       <Center py={6}>
         <Box
@@ -108,7 +107,7 @@ import {
   
           <Stack mt={8} direction={'row'} spacing={4}>
           
-            <Button onClick={onOpen}
+            <Button
               flex={1}
               fontSize={'sm'}
               rounded={'full'}
@@ -125,39 +124,6 @@ import {
               }}>
               Book
             </Button>
-      <Modal isOpen={isOpen} onClose={onClose}>
-        <ModalOverlay />
-        <ModalContent>
-          <ModalHeader>
-            <ModalCloseButton />
-          </ModalHeader>
-
-          <ModalBody>
-            <form
-              id="new-note"
-              onSubmit={(event) => {
-                event.preventDefault();
-                alert("Submitted");
-              }}
-            >
-              <FormControl>
-                <FormLabel fontSize={"xl"}>Booking Request</FormLabel>
-                <label>Message</label>
-                <Textarea id="msg" height="60vh"/>
-                <FormHelperText>
-                  We keep your account data secure
-                </FormHelperText>
-              </FormControl>
-            </form>
-          </ModalBody>
-
-          <ModalFooter>
-            <Button type="submit" form="new-note">
-              Submit
-            </Button>
-          </ModalFooter>
-        </ModalContent>
-      </Modal>
           </Stack>
         </Box>
       </Center>
