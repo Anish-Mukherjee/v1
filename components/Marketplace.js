@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Flex,
+  Flex, Link
 } from "@chakra-ui/react";
 import Profile from "./Profile";
 
@@ -9,6 +9,7 @@ const Marketplace = () => {
     <>
       <Flex justifyContent="space-around">
         <Profile />
+        <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank">Become an expert</Link>
       </Flex>
     </>
   );
