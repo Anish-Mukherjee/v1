@@ -105,7 +105,7 @@ import {
               _focus={{
                 bg: 'yellow.500',
               }}>
-              <Link href="https://thirdweb.com/dashboard/mumbai/0x70e7aD90645788eEa38f200d2338530ebf1eF540/" target="_blank">Deposit</Link>
+              <Link href="https://thirdweb.com/dashboard/rinkeby/0x8A9868B6B6c48F02bA2182cebB8Fd0AD3cECf6E0/" target="_blank">Deposit</Link>
             </Button>
           </Stack>
         </Box>
