@@ -1,16 +1,18 @@
 import React from "react";
 import {
-  Flex, Link
+  Link, Wrap, Center, Button
 } from "@chakra-ui/react";
 import Profile from "./Profile";
 
 const Marketplace = () => {
   return (
     <>
-      <Flex justifyContent="space-around">
+    <Center>
+      <Wrap>
         <Profile />
-        <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank">Become an expert</Link>
-      </Flex>
+      </Wrap>
+      </Center>
+      <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank"><Button>Become an Expert</Button></Link>
     </>
   );
 };
