@@ -12,7 +12,7 @@ const Marketplace = () => {
         <Profile />
       </Wrap>
       </Center>
-      <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank"><Button>Become an Expert</Button></Link>
+      <Link href="../experts"><Button>Become an Expert</Button></Link>
     </>
   );
 };
