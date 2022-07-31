@@ -12,7 +12,7 @@ import {
    
   } from '@chakra-ui/react';
 
-  export default function Profile() {
+  export default function Profile(props) {
   
     return (
       <Center py={6}>
@@ -33,23 +33,17 @@ import {
             pos={'relative'}
           />
           <Heading fontSize={'2xl'} fontFamily={'body'}>
-            mo
+            {props.ethaddress}
           </Heading>
           <Text
             textAlign={'center'}
             color={useColorModeValue('gray.700', 'gray.400')}
             px={3}>
-            Creator of Confer {' '}
+            {props.name}
           </Text>
          
           <Stack align={'center'} justify={'center'} direction={'row'} mt={6}>
-            <Badge
-              px={2}
-              py={1}
-              bg={useColorModeValue('gray.50', 'gray.800')}
-              fontWeight={'400'}>
-            Thur. 1PM - 2PM CENTRAL
-            </Badge>
+          
             <Badge
               px={2}
               py={1}
