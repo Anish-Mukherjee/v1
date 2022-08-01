@@ -24,7 +24,9 @@ const Marketplace = () => {
           {experts === null ? (
             <h1>Loading...</h1>
           ) : (
-            experts.map((expert) => <Profile ethaddress={expert.id} />)
+            experts.map((expert, i) => (
+              <Profile key={i} ethaddress={expert.id} />
+            ))
           )}
         </Wrap>
       </Center>
