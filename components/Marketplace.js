@@ -1,29 +1,35 @@
 import React from "react";
-import {
-  Link, Wrap, Center, Button
-} from "@chakra-ui/react";
+import { Link, Wrap, Center, Button } from "@chakra-ui/react";
 import Profile from "./Profile";
-import { useMoralisCloudFunction } from "react-moralis";
+import { useMoralisCloudFunction, useMoralis } from "react-moralis";
+import { useState, useEffect } from "react";
+//import Form from "./Form";
 
 const Marketplace = () => {
-  const { fetch } = useMoralisCloudFunction(
-    "getExperts"
-  );
-  const cloudCall = () => {
-    fetch({
-      onSuccess: (data) => console.log(data), // ratings should be 4.5
+  const [experts, setExperts] = useState(null);
+  const { authenticate, user, isAuthenticated } = useMoralis();
+
+  const { fetch: addresses } = useMoralisCloudFunction("getExperts");
+
+  useEffect(() => {
+    addresses({
+      onSuccess: (data) => setExperts(data),
     });
-  };
+  }, []);
 
   return (
     <>
-    <Center>
-      <Wrap>
-        <Profile />
-      </Wrap>
+      <Center>
+        <Wrap>
+          {experts === null ? (
+            <h1>Loading...</h1>
+          ) : (
+            experts.map((expert) => <Profile ethaddress={expert.id} />)
+          )}
+        </Wrap>
       </Center>
-      <Button onClick={()=>cloudCall()}>Make Cloud Call</Button>
-      <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank"><Button>Become an Expert</Button></Link>
+
+      <Button onClick={() => authenticate()}>Become an Expert</Button>
     </>
   );
 };
