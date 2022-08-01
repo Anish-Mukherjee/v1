@@ -22,15 +22,7 @@ export default function Profile(props) {
         p={6}
         textAlign={"center"}
       >
-        <Avatar
-          size={"xl"}
-          src={
-            "https://pbs.twimg.com/profile_images/1548399412061212672/9Rq84t8a_400x400.jpg"
-          }
-          alt={"Avatar Alt"}
-          mb={4}
-          pos={"relative"}
-        />
+        <Avatar size={"xl"} alt={"Avatar Alt"} mb={4} pos={"relative"} />
         <Heading fontSize={"2xl"} fontFamily={"body"}>
           {props.ethaddress}
         </Heading>
