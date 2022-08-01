@@ -9,10 +9,10 @@ const Marketplace = () => {
   const [experts, setExperts] = useState(null);
   const { authenticate, user, isAuthenticated } = useMoralis();
 
-  const { fetch: addresses } = useMoralisCloudFunction("getExperts");
+  const { fetch } = useMoralisCloudFunction("getExperts");
 
   useEffect(() => {
-    addresses({
+    fetch({
       onSuccess: (data) => setExperts(data),
     });
   }, []);
