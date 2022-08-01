@@ -15,9 +15,7 @@ const Marketplace = () => {
     fetch({
       onSuccess: (data) => setExperts(data),
     });
-      // eslint-disable-next-line react-hooks/exhaustive-deps
-
-  }, []);
+  });
 
   return (
     <>
