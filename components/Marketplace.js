@@ -17,6 +17,8 @@ const Marketplace = () => {
     });
   });
 
+  console.log(experts);
+
   return (
     <>
       <Center>
