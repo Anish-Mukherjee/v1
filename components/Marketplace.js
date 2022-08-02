@@ -17,8 +17,7 @@ const Marketplace = () => {
     fetch({
       onSuccess: (data) => setExperts(data),
     });
-  }, []); // eslint-disable-line react-hooks/exhaustive-deps;
-
+  }, []); 
   console.log(experts);
 
   const login = async () => {
