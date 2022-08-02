@@ -17,7 +17,7 @@ const Marketplace = () => {
     fetch({
       onSuccess: (data) => setExperts(data),
     });
-  }, []); 
+  }, [fetch]);
   console.log(experts);
 
   const login = async () => {
