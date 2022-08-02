@@ -17,7 +17,7 @@ export default function Profile(props) {
       <Box
         maxW={"320px"}
         w={"full"}
-        bg={useColorModeValue("purple.100", "gray.900")}
+        bg={useColorModeValue("blue.200", "gray.900")}
         rounded={"lg"}
         p={6}
         textAlign={"center"}
