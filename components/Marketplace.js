@@ -8,16 +8,22 @@ import { Moralis } from "moralis";
 //import Form from "./Form";
 
 const Marketplace = () => {
-  const { authenticate, user, isAuthenticated } = useMoralis();
+  const { authenticate, user, isAuthenticated, isInitialized } = useMoralis();
 
   const [experts, setExperts] = useState(null);
-  const { fetch } = useMoralisCloudFunction("getExperts");
+  const { fetch } = useMoralisCloudFunction(
+    "getExperts",
+    {},
+    { autoFetch: false }
+  );
 
   useEffect(() => {
-    fetch({
-      onSuccess: (data) => setExperts(data),
-    });
-  }, []);
+    isInitialized &&
+      fetch({
+        onSuccess: (data) => setExperts(data),
+      });
+  }, [isInitialized]);
+
   console.log(experts);
 
   const login = async () => {
