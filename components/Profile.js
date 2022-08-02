@@ -17,10 +17,11 @@ export default function Profile(props) {
       <Box
         maxW={"320px"}
         w={"full"}
-        bg={useColorModeValue("blue.200", "gray.900")}
+        bg={useColorModeValue("purple.100", "gray.900")}
         rounded={"lg"}
         p={6}
         textAlign={"center"}
+        margin={"2"}
       >
         <Avatar size={"xl"} alt={"Avatar Alt"} mb={4} pos={"relative"} />
         <Heading fontSize={"2xl"} fontFamily={"body"}>
@@ -50,7 +51,7 @@ export default function Profile(props) {
             flex={1}
             fontSize={"sm"}
             rounded={"full"}
-            bg={"blue.400"}
+            bg={"blue.300"}
             color={"white"}
             boxShadow={
               "0px 1px 25px -5px rgb(66 153 225 / 48%), 0 10px 10px -5px rgb(66 153 225 / 43%)"
