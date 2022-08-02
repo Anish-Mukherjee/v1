@@ -41,7 +41,7 @@ const Marketplace = () => {
           {experts === null ? (
             <h1>Loading...</h1>
           ) : (
-            experts.map((expert, i) => (
+            experts.slice(1).map((expert, i) => (
               <Profile key={i} ethaddress={expert.attributes.ethAddress} />
             ))
           )}
