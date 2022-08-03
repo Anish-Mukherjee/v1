@@ -13,7 +13,7 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const createProfile = async (username, rate, calendar) => {
+    const createProfile = async () => {
       await authenticate();
       const user = Moralis.User.current();
 
@@ -33,21 +33,18 @@ const Form = () => {
         <label>Name:</label>
         <input
           type="text"
-          required
           value={username}
           onChange={(e) => setUsername(e.target.value)}
         />
         <label>Hourly Rate (USD)</label>
         <input
           type="number"
-          required
           value={rate}
           onChange={(e) => setRate(e.target.value)}
         />
         <label>Calendar Link:</label>
         <input
           type="url"
-          required
           value={calendar}
           onChange={(e) => setCalendar(e.target.value)}
         />
