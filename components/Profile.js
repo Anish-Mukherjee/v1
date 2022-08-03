@@ -91,7 +91,7 @@ export default function Profile() {
             }}
           >
             <Link
-              href="https://thirdweb.com/dashboard/rinkeby/0x8A9868B6B6c48F02bA2182cebB8Fd0AD3cECf6E0/"
+              href="https://thirdweb.com/polygon/0xe383201858f5AF02Fc04b2d7A4fB2e3489da978B/"
               target="_blank"
             >
               Deposit

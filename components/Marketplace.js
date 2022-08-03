@@ -1,8 +1,6 @@
 import React from "react";
-import { Link, Wrap, Center, Button } from "@chakra-ui/react";
+import { Wrap, Center } from "@chakra-ui/react";
 import Profile from "./Profile";
-
-//import Form from "./Form";
 
 const Marketplace = () => {
   return (
