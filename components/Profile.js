@@ -11,7 +11,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 
-export default function Profile(props) {
+export default function Profile() {
   return (
     <Center py={6}>
       <Box
@@ -23,16 +23,22 @@ export default function Profile(props) {
         textAlign={"center"}
         margin={"2"}
       >
-        <Avatar size={"xl"} alt={"Avatar Alt"} mb={4} pos={"relative"} />
+        <Avatar
+          size={"xl"}
+          alt={"Avatar Alt"}
+          mb={4}
+          pos={"relative"}
+          src="https://pbs.twimg.com/profile_images/1548399412061212672/9Rq84t8a_400x400.jpg"
+        />
         <Heading fontSize={"2xl"} fontFamily={"body"}>
-          {props.ethaddress}
+          mo
         </Heading>
         <Text
           textAlign={"center"}
           color={useColorModeValue("gray.700", "gray.400")}
           px={3}
         >
-          {""}
+          Creator of Confer
         </Text>
 
         <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
