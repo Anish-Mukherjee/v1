@@ -1,13 +1,11 @@
 import React from "react";
-import { Link, Wrap, Center, Button, Heading } from "@chakra-ui/react";
+import { Wrap, Center } from "@chakra-ui/react";
 import Profile from "./Profile";
 import { useMoralisCloudFunction, useMoralis } from "react-moralis";
 import { useState, useEffect } from "react";
-import { Moralis } from "moralis";
-import Form from "./Form";
 
 const Marketplace = () => {
-  const { authenticate, user, isAuthenticated, isInitialized } = useMoralis();
+  const { isInitialized } = useMoralis();
 
   const [experts, setExperts] = useState(null);
   const { fetch } = useMoralisCloudFunction(
@@ -38,8 +36,6 @@ const Marketplace = () => {
           )}
         </Wrap>
       </Center>
-      <Heading>Profile:</Heading>
-      <Form />
     </>
   );
 };
