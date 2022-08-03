@@ -1,11 +1,10 @@
 import React from "react";
-import { Link, Wrap, Center, Button } from "@chakra-ui/react";
+import { Link, Wrap, Center, Button, Heading } from "@chakra-ui/react";
 import Profile from "./Profile";
 import { useMoralisCloudFunction, useMoralis } from "react-moralis";
 import { useState, useEffect } from "react";
 import { Moralis } from "moralis";
-
-//import Form from "./Form";
+import Form from "./Form";
 
 const Marketplace = () => {
   const { authenticate, user, isAuthenticated, isInitialized } = useMoralis();
@@ -24,16 +23,6 @@ const Marketplace = () => {
       });
   }, [isInitialized]);
 
-  console.log(experts);
-
-  const login = async () => {
-    await authenticate();
-    const user = Moralis.User.current();
-    console.log(user);
-  };
-
-  const createProfile = async () => {};
-
   return (
     <>
       <Center>
@@ -41,14 +30,16 @@ const Marketplace = () => {
           {experts === null ? (
             <h1>Loading...</h1>
           ) : (
-            experts.slice(1).map((expert, i) => (
-              <Profile key={i} ethaddress={expert.attributes.ethAddress} />
-            ))
+            experts
+              .slice(1)
+              .map((expert, i) => (
+                <Profile key={i} ethaddress={expert.attributes.ethAddress} />
+              ))
           )}
         </Wrap>
       </Center>
-
-      <Button onClick={() => login()}>Become an Expert</Button>
+      <Heading>Profile:</Heading>
+      <Form />
     </>
   );
 };
