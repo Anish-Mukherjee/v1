@@ -1,11 +1,11 @@
 import React from "react";
-import { Wrap, Center } from "@chakra-ui/react";
+import { Wrap, Center, Button } from "@chakra-ui/react";
 import Profile from "./Profile";
 import { useMoralisCloudFunction, useMoralis } from "react-moralis";
 import { useState, useEffect } from "react";
 
 const Marketplace = () => {
-  const { isInitialized } = useMoralis();
+  const { isInitialized, authenticate } = useMoralis();
 
   const [experts, setExperts] = useState(null);
   const { fetch } = useMoralisCloudFunction(
@@ -34,6 +34,7 @@ const Marketplace = () => {
                 <Profile key={i} ethaddress={expert.attributes.ethAddress} />
               ))
           )}
+          <Button onClick={authenticate}>Sign Up</Button>
         </Wrap>
       </Center>
     </>
