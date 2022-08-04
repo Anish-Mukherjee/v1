@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrap, Center } from "@chakra-ui/react";
+import { Wrap, Center, Link } from "@chakra-ui/react";
 import Profile from "./Profile";
 
 const Marketplace = () => {
@@ -10,6 +10,9 @@ const Marketplace = () => {
           <Profile />
         </Wrap>
       </Center>
+      <Link href="https://airtable.com/shrTdIihBsizlSXPX" target="_blank">
+        Become Expert
+      </Link>
     </>
   );
 };
