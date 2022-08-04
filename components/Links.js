@@ -44,7 +44,7 @@ const Links = () => {
           }}
         >
           <Link
-            href="https://thirdweb.com/polygon/0xe383201858f5AF02Fc04b2d7A4fB2e3489da978B/"
+            href="https://conferdemo.surge.sh/debug"
             target="_blank"
           >
             Deposit
