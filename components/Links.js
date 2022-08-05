@@ -43,15 +43,11 @@ const Links = () => {
             bg: "yellow.500",
           }}
         >
-          <Link
-            href="https://conferdemo.surge.sh/debug"
-            target="_blank"
-          >
+          <Link href="https://conferdemo.surge.sh/" target="_blank">
             Deposit
           </Link>
         </Button>
       </HStack>
-      
     </div>
   );
 };
