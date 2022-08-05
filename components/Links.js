@@ -25,7 +25,7 @@ const Links = () => {
             Book
           </Button>
         </Link>
-        <Link href="https://conferdemo.surge.sh/" target="_blank">
+        <Link href="https://conferdemo.surge.sh/debug" target="_blank">
           <Button
             flex={1}
             fontSize={"sm"}
