@@ -4,7 +4,9 @@ import Profile from "./Profile";
 
 const Marketplace = () => {
   return (
-    <>
+    <div
+      
+    >
       <Center>
         <Wrap>
           <Profile />
@@ -55,7 +57,7 @@ const Marketplace = () => {
           </Link>
         </HStack>
       </Center>
-    </>
+    </div>
   );
 };
 
