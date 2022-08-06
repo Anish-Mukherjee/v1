@@ -34,14 +34,6 @@ export default function Profile() {
         <Heading fontSize={"2xl"} fontFamily={"body"}>
           mo
         </Heading>
-        <Text
-          textAlign={"center"}
-          color={useColorModeValue("gray.700", "gray.400")}
-          px={3}
-        >
-          Creator of Confer
-        </Text>
-
         <Stack align={"center"} justify={"center"} direction={"row"} mt={6}>
           <Badge
             px={2}
@@ -49,15 +41,14 @@ export default function Profile() {
             bg={useColorModeValue("gray.50", "gray.800")}
             fontWeight={"400"}
           >
-            1 ETH
+            0.1 ETH
           </Badge>
         </Stack>
-       
-        <Stack mt={8} direction={"row"} spacing={4}> 
-        <Links margin={"15"}/>
+
+        <Stack mt={8} direction={"row"} spacing={4}>
+          <Links margin={"15"} />
         </Stack>
       </Box>
-    
     </Center>
   );
 }

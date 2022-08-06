@@ -160,19 +160,28 @@ export default function Home() {
         Contract Balance : {balance}
       </Heading>
 
-      <Flex direction="column" width="100vw" height="80vh">
+      {/*<Flex direction="column" width="100vw" height="80vh">
         {/*<button align="center" onClick={deposit}>
           Click to deposit
-        </button>*/}
+        </button>
         <Box flex="1" px="52" py="20">
           <Tabs
             size="lg"
             colorScheme="purple"
             align="center"
             variant="enclosed"
-          >
-            <Marketplace />
-          </Tabs>
+          />
+        </Box>
+      <div
+        style={{
+          backgroundRepeat: "no-repeat",
+          backgroundSize: "cover",
+          backgroundImage: `url(https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JhZGllbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)`,
+        }}
+      >*/}
+      <Flex direction="column" width="100vw" height="80vh">
+        <Box flex="1" px="52" py="20">
+          <Marketplace />
         </Box>
       </Flex>
     </>
