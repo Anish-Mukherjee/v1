@@ -11,12 +11,12 @@ import Head from "next/head";
 import { useState, useEffect } from "react";
 import Marketplace from "../components/Marketplace";
 
-import abi from "../utils/Confer.json";
+//import abi from "../utils/Confer.json";
 
 import { useSDK } from "@thirdweb-dev/react";
 
 export default function Home() {
-  const contractABI = abi.abi;
+  //const contractABI = abi.abi;
   const contractAddress = "0xF710Ff459abdc9eB01d763Fd099200F0A93a4E24";
   const [balance, setBalance] = useState(0);
   const [currentAccount, setCurrentAccount] = useState("");
@@ -111,6 +111,7 @@ export default function Home() {
       <Head>
         <title>Confer</title>
       </Head>
+
       <Center>
         <HStack>
           <Button
@@ -172,12 +173,15 @@ export default function Home() {
             variant="enclosed"
           />
         </Box>
+=======
+>>>>>>> 16072fa459a6377a9e4c2c1721d941b5ad26f515
       <div
         style={{
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           backgroundImage: `url(https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8Z3JhZGllbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60)`,
         }}
+<<<<<<< HEAD
       >*/}
       <Flex direction="column" width="100vw" height="80vh">
         <Box flex="1" px="52" py="20">
