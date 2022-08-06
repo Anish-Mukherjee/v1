@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@chakra-ui/react": "2.2.3",
+    "@thirdweb-dev/react": "^2.6.0",
+    "@thirdweb-dev/sdk": "^2.3.33",
     "express": "^4.18.1",
     "moralis": "^1.11.0",
     "next": "12.2.0",
