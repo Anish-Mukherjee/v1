@@ -5,7 +5,7 @@ const Links = () => {
   return (
     <div>
       <HStack>
-        <Link href="https://cal.com/momin/30min" target="_blank">
+        <Link href="https://calendly.com/mominkaleem/" target="_blank">
           <Button
             flex={1}
             fontSize={"sm"}
